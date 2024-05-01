@@ -1,0 +1,190 @@
+.dashboard {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  
+    &-top {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+  
+      & h2 {
+        font-size: $sm-font;
+        font-weight: 400;
+        color: rgba($color: $black-color, $alpha: 0.5);
+      }
+  
+      & h1 {
+        font-size:$lg-font;
+        font-weight: 800;
+        color: $black-color;
+        line-height: normal;
+      }
+    }
+  
+    &-analytics {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr); 
+      gap: 2.5rem;
+     
+
+      &--card {
+        margin-top: 2.5rem;
+        background: $white-color;
+        border-radius: 8px;
+        border: 1px solid $lightborder-color;
+        padding: 1rem;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        justify-content: center;
+        gap: 2rem;
+  
+        &_icon {
+          position: absolute;
+          top: -15%;
+          left: 10%;
+          background: $primary-color;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          height: 3.5rem;
+          width: 3.5rem;
+          border-radius: 8px;
+          color: white;
+          font-size: $lg-font;
+  
+          & i {
+            color: $white-color;
+            font-size: $lg-font;
+          }
+        }
+  
+        & h2 {
+          font-size: $md-font;
+          font-weight: 500;
+          color: $black-color;
+          line-height: 3rem;
+        }
+  
+        & h1 {
+          font-size: $xl-font;
+          font-weight: 600;
+          color: $primary-color;
+          line-height: 3rem;
+        }
+      }
+    }
+  
+    &-rideanalytics {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+  
+      &--head {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+  
+        & h2 {
+          font-size:$xs-font;
+          font-weight: 600;
+          color: $black-color;
+        }
+  
+        & select {
+          width: 150px;
+          display: inline-block;
+          background: $white-color;
+          border: 0.1px solid $primary-color;
+          border-radius: $border-radius;
+          height: 2.5rem;
+          font-size: .8rem;
+        }
+      }
+  
+      &--ride {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 2.5rem;
+  
+        &_rideitem {
+          border: 2px solid $primary-color;
+          border-top: 12px solid $primary-color;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          flex-direction: column;
+          border-radius: $border-radius;
+          gap: 1rem;
+          padding: 1rem;
+  
+          & h2 {
+            font-size: 1rem;
+            font-weight: 600;
+            color: $black-color;
+            text-align: center;
+          }
+  
+          & p {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: $primary-color;
+          }
+  
+          & h3 {
+            font-size: .8rem;
+            font-weight: 600;
+            color: $success-color;
+            text-align: center;
+          }
+  
+          & h4 {
+            font-size: .8rem;
+            font-weight: 600;
+            color: $error-color;
+            text-align: center;
+          }
+        }
+      }
+    }
+  }
+
+
+@media( max-width : 1038px) {
+
+  .dashboard{
+    &-analytics{
+      grid-template-columns: repeat(3,1fr);
+      justify-content: center;
+    }
+  }
+}
+@media( max-width : 790px) {
+
+  .dashboard{
+    &-analytics{
+      grid-template-columns: repeat(2,1fr);
+      justify-content: center;
+    }
+  }
+}
+@media( max-width : 530px) {
+
+  .dashboard{
+    &-analytics{
+      grid-template-columns: repeat(2,1fr);
+      justify-content: center;
+    }
+  }
+}
+@media( max-width : 430px) {
+
+  .dashboard{
+    &-analytics{
+      grid-template-columns: repeat(1,1fr);
+      justify-content: center;
+    }
+  }
+}

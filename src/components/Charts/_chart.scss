@@ -1,0 +1,47 @@
+.charts-container {
+  padding: 4rem .5rem;
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 2rem;
+  margin: 0rem auto;
+  width: 100%;
+
+  & .chart {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    border-radius: .8rem;
+    padding: 1rem 1rem;
+    border: $border;
+
+    & .chart-title {
+      width: 100%;
+      padding-left: 2rem;
+      font-size: $md-font;
+    }
+
+  }
+}
+
+.chartwrapper {
+  width:95%;
+  height: 20rem;
+  margin: 0rem auto;
+  background-color: white;
+  display: flex;
+  gap: 4rem;
+  color: black;
+}
+
+@media  (max-width:1200px ){
+  .charts-container{
+    grid-template-columns: repeat(2,1fr);
+  }
+}
+
+@media  (max-width:810px ){
+  .charts-container{
+    grid-template-columns: repeat(1,1fr);
+  }
+}

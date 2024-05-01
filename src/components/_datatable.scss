@@ -1,0 +1,187 @@
+.vcdata-title {
+    margin-top: 1rem;
+    color: $primary-color;
+    font-size: $xxl-font;
+}
+
+.table-wrapper-top {
+    width: 100%;
+    margin-top: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+
+
+
+    & .icon {
+        font-size: 3.4rem;
+        color: $primary-color;
+    }
+
+    & .add-btn {
+        padding: .8rem 1rem;
+        border-radius: .3rem;
+        border: none;
+        background-color: transparent;
+        color: green;
+        font-size: $sm-font;
+        font-weight: 500;
+        transition: .2s;
+        border: 1.5px solid green;
+        cursor: pointer;
+        box-shadow: $box-shadow;
+
+        &:hover {
+            color: $success-color;
+            border: $border-success;
+        }
+    }
+}
+
+.table-wrapper {
+    width: 100%;
+    overflow-x: auto;
+    //    min-height: 50vh;
+
+
+    &-table {
+        width: 100%;
+        font-size: $md-font;
+        border-collapse: collapse;
+        background-color: white;
+        overflow-x: auto;
+        height: 100%;
+
+        & thead {
+            background-color: $primary-color;
+            height: 4rem;
+            color: white;
+
+            & th {
+                margin: 0;
+                padding: 0 1.5rem;
+                white-space: nowrap;
+                text-transform: capitalize;
+                border: 1px solid rgb(82, 80, 80);
+
+            }
+        }
+
+        & .table-body {
+            & tr {
+                text-align: center;
+                &:hover{
+                    background-color: #0b005a19;
+                    transition: 150ms;
+                } 
+
+                & td {
+                    text-align: center;
+                    border: 1px solid rgba(0, 0, 0, 0.406) ;
+                    padding: .5rem 1rem;
+                    height: 5rem;
+                    white-space: nowrap;
+                    
+
+                    & .daysleft {
+                        display: flex;
+                        align-items: center;
+                        justify-content: left;
+                        gap: .3rem;
+                        font-weight: 400;
+                    }
+
+
+                    & .start {
+                        & .left {
+                            color: $primary-color;
+                        }
+
+                        & .today {
+                            color: green;
+                        }
+
+                        & .finish {
+                            color: red;
+                        }
+                    }
+
+                    & .end {
+                        & .left {
+                            color: $primary-color;
+                        }
+
+                        & .today {
+                            color: red;
+                        }
+
+                        & .finish {
+                            color: red;
+                        }
+                    }
+                }
+
+                & .sn{
+                    text-align: center;
+                }
+
+                & .notfound {
+                    text-align: left;
+                    padding: 1rem 1rem;
+                }
+
+                & .desc {
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    max-width: 20rem;
+                }
+
+                & a {
+                    color: $primary-color;
+                    text-decoration: underline;
+                }
+
+                & .action{
+                    text-align: center;
+                }
+
+                & .managecandidate {
+                       text-align: center; 
+
+                    & .view-all {
+                        font-size: $xs-font;
+                        font-weight: 500;
+                        padding: .4rem 1rem;
+                        border-radius: .5rem;
+                        border: none;
+                        background-color: white;
+                        color: $primary-color;
+                        cursor: pointer;
+                        margin-top: .5rem;
+                        border: 1px solid $primary-color;
+                        transition: .3s;
+
+                        &:hover {
+                            background-color: $primary-color;
+                            color: white;
+                        }
+                    }
+                }
+
+                & .image {
+                    
+                    & img {
+                        height: 3rem;
+                        width: 3rem;
+                        object-fit: cover;
+                        margin: 0 auto;
+                    }
+                }
+
+            }
+        }
+    }
+
+}
+

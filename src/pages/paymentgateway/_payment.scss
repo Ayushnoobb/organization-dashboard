@@ -1,0 +1,24 @@
+.payment-box{
+    width: 100%;
+    margin-top: 5rem;
+
+    & .offline-pay{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 3rem;
+        padding: 3rem 0;
+
+        & .input{
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+
+        & .title{
+            font-size: $lg-font;
+            font-weight: 500;
+        }
+
+    }
+}
