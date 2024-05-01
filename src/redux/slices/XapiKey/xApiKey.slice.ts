@@ -3,7 +3,7 @@ import { RootStore } from "../../store"
 import { getXApikey } from "../../actions/XApiKey/xapikey.actions"
 import { addMinutesAndConvertToISOString } from "../../../utils/helper"
 // import { XapiResponseInterface } from "../interface/xApi.interface"
-import { OrganizationDetails, XapiResponseInterface } from "../interface/xApi.interface"
+import { XapiResponseInterface } from "../interface/xApi.interface"
 
 
 export interface InitialXapiKeyInterface {
@@ -31,7 +31,7 @@ const xApiKeySlice = createSlice({
             .addCase(getXApikey.pending, (state: InitialXapiKeyInterface) => {
                 state.isLoading = true
             })
-            .addCase(getXApikey.fulfilled, (state: InitialXapiKeyInterface, action: PayloadAction<{  token: string,organization: OrganizationDetails}>) => {
+            .addCase(getXApikey.fulfilled, (state: InitialXapiKeyInterface, action: PayloadAction<XapiResponseInterface>) => {
                 const { token } = action.payload
                 state.x_api = token ?? null
                 state.expiry = token && addMinutesAndConvertToISOString(new Date(), 10)
